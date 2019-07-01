@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>代码片段测试</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 10px;
+        }
+
+        .border-style {
+            width: 0;
+            height: 0;
+            border: 30px solid transparent;
+            border-bottom-color: #0a8e6c;
+            border-top-color: #0b71ba;
+            border-left-color: darkorange;
+            border-right-color: purple;
+        }
+
+        .item {
+            position: relative;
+            width: 150px;
+            height: 50px;
+            background-color: #0a8e6c;
+            border-radius: 5px;
+            line-height: 50px;
+            padding-left: 10px;
+        }
+
+        .item:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-right-color: #0a8e6c;
+            top: 15px;
+            left: -20px;
+        }
+
+
+    </style>
+    <script>
+        //let用法
+        // for(let i = 0; i < 5; i++){
+        //         setTimeout(function () {
+        //             console.log(new Date, i);
+        //         }, 1000)
+        // }
+
+        //promise用法
+        //  const tasks = [];
+        //  for(var i = 0; i < 5; i++){
+        //      ((j) => {
+        //         tasks.push(new Promise((resolve) => {
+        //             setTimeout(() => {
+        //                 console.log(new Date, j);
+        //                 resolve();
+        //      }, 1000*j);
+        //      }))
+        //      })(i);
+        //  }
+        //
+        //  Promise.all(tasks).then(() => {
+        //      setTimeout(() =>{
+        //          console.log(new Date, i)
+        // },1000)
+        //  })
+
+
+        // var myObject = {
+        //     foo: "bar",
+        //     func: function () {
+        //         var self = this;
+        //         console.log(this.foo);
+        //         console.log(self.foo);
+        //         (function () {
+        //             console.log(this);
+        //             console.log(self);
+        //         })()
+        //     }
+        // }
+        // myObject.func();
+
+        // function Foo() {
+        //     var i = 0;
+        //     return function () {
+        //         console.log(i++)
+        //     }
+        // }
+        // Foo();
+
+        var a = [1, 2];
+        // alert(Object.prototype.toString.call(a) === '[object Array]')   最准确true
+        //   alert(Array.isArray(a))    true
+        // alert(typeof(a))    为object
+        //         alert(a instanceof Array)   true
+
+        //深拷贝
+        // function clone(Obj){
+        //     var buf;
+        //     if(Obj instanceof Array){
+        //         buf = [];
+        //         var i = Obj.length;
+        //         while (i--){
+        //             buf[i] = clone(Obj[i]);
+        //         }
+        //         return buf;
+        //     }else if(Obj instanceof Object){
+        //         buf = {};
+        //         for(var k in Obj){
+        //             buf[k] = clone(Obj[k]);
+        //         }
+        //         return buf;
+        //     }else {
+        //         return Obj;
+        //     }
+        // }
+
+        //         var a = "2015".split("");
+        //         a.sort(function (a, b) {return a>b?-1 : 1})
+        // console.log(a)
+
+        //    Array.prototype.unique1 = function () {
+        //        var n = [];
+        //        for(var i = 0; i < this.length; i++){
+        //            if(n.indexOf(this[i]) == -1) n.push(this[i]);
+        //        }
+        //        return n;
+        //    }
+        //
+        // var a = [2,3,4,5,1,2,3]
+        // a = a.unique1()
+        //    console.log(a)
+
+        // var a = "2015年是重要的一年"
+        // console.log(a.substring(6,8))
+        // console.log(a.slice(6,8))
+        // console.log(a.substr(6,2))
+
+        //匹配email地址的正则表达式
+        // var reg = /^\w+@\w+.[a-zA-Z]{2,3}(.[a-zA-Z]{2,3})?$/;
+
+        // console.log(1+"2"+"2")
+        // console.log(1+ + "2" + "2")
+        // console.log("a" - "b" + "2")
+        // console.log("a" - "b" + 2)
+
+        // var x = new Boolean(false);   //为一个Boolean对象
+        // var y = Boolean(false);  //为false
+
+        // function b(c) {
+        //     console.log(c);
+        //     function c() {
+        //         console.log("d")
+        //     }
+        // }
+        // b(10)
+    </script>
+</head>
+<body>
+<p class="border-style"></p>
+<p class="item">你好呀小可爱</p>
+
+</body>
+</html>

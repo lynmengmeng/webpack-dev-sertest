@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // var obj = {
+        //     toString:function(){
+        //         console.log('toString')
+        //         return Object.prototype.toString.call(this)
+        //     },
+        //     valueOf:function(){
+        //         console.log('valueOf')
+        //         return Object.prototype.valueOf.call(this)
+        //     }
+        // }
+        // alert(obj);
+        // alert(+obj);
+        // alert(obj=={});
+        // alert(obj==={})
+        // alert(obj=='test')
+        // alert(obj==='test')
+
+        function F1(){this.a1 = 1; this.b1 = 2; F2.call(this,5,6);}
+        function F2(a,b){this.a2 = a; this.b2 = b;}
+console.log(new F1())
+    </script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        .page {
+            /*position: relative;*/
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .top {
+            height: 50px;
+            background-color: green;
+        }
+
+        .bottom {
+            /*position: absolute;*/
+            /*top: 50px;*/
+            /*bottom: 0px;*/
+            /*left: 0px;*/
+            /*right: 0px;*/
+            height: 100px;
+            border: 1px solid darkorange;
+        }
+    </style>
+</head>
+<body>
+<form submit="cost">
+    <input type="text" value="12">
+</form>
+<form submit="cost">
+    <input type="text" value="34">
+</form>
+</body>
+<script>
+    for(var i=0;i<document.forms.length; i++){
+        for(var j=0;j<document.forms[i].elements.length; j++){
+            if(document.forms[i].elements[j].type=="text")
+            document.forms[i].elements[j].value="";
+        }
+    }
+</script>
+</html>
